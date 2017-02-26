@@ -28,6 +28,12 @@
     #featured {
         margin-top: 2rem;
     }
+
+    .enjoy {
+        .img-fluid {
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (max-width: $viewport-xs) {

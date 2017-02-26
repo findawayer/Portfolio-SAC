@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@import "compass"; // http://compass-style.org/
+@import "partials/_variables.scss"; // color scheme, typography...
+@import "partials/_mixins.scss"; // mixins
+
+a {
+	color: inherit;
+}
+
+.navbar {
+	padding: .5rem 0;
+}
+
+.dropdown-toggle::after {
+    width: 8px;
+    height: 8px;
+    margin-left: .5em;
+    background: url(../img/ui/down-chevron-fff.svg) no-repeat scroll 0 0;
+    background-size: 8px 8px;
+    border: none;
+}
+
+.dropdown-menu {
+	background: rgba($color1, .92);
+	border: none;
+	border-radius: 0;
+    box-shadow: 0 2px 3px rgba(50, 50, 50, .3);
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    color: white;
+    padding: .5rem 1rem;
+    transition: all 0.1s linear;
+    transition-property: background, color;
+
+    &:hover {
+        background: white;
+        color: $color1;
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid shade($color1, 30);
+    }
+}

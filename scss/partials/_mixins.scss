@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// 뷰포트 분할
+$viewport-xs: 576px;
+$viewport-sm: 768px;
+$viewport-md: 992px;
+$viewport-lg: 1200px;
+
+@mixin view-xs {
+    @media (min-width: #{$viewport-xs}) {
+        @content;
+    }
+}
+@mixin view-sm {
+    @media (min-width: #{$viewport-sm}) {
+        @content;
+    }
+}
+@mixin view-md {
+    @media (min-width: #{$viewport-md}) {
+        @content;
+    }
+}
+@mixin view-lg {
+    @media (min-width: #{$viewport-lg}) {
+        @content;
+    }
+}
+
+// 스케일
+@function scale( $base: 1, $iteration: 0 ) {
+    $interval: 1.12;
+
+    @if $iteration > 0 {
+        @for $i from 1 through $iteration {
+            $base: $base * $interval;
+        }
+    }
+    @else if $iteration < 0 {
+        @for $i from 1 through $iteration * -1 {
+            $base: $base / $interval;
+        }
+    }
+
+    @return round( $base );
+}
+
+// Scale font size based on the golden ratio
+@mixin text-scale( $iteration ) {
+    font-size: scale( $base-font-size, $iteration );
+}

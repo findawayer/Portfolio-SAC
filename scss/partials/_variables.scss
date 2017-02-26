@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// 타이포그래피
+$base-font: system-ui, Arial, Dotum, sans-serif;
+$base-font-en: system-ui, sans-serif;
+$base-font-ja: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$base-font-zn: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+$base-font-size: 13px;
+$base-font-weight: 400;
+$base-line-height: 1.6;
+$base-tracking: -0.03em;
+$base-font-color: #161616;
+
+// 컬러 스킴
+// https://coolors.co/2d2527-7c2430-8c4649-7a343c-f0f0f2
+$color-scheme: "2d2527-7c2430-8c4649-7a343c-f0f0f2";
+
+@function sliceHexSet( $hexset, $index ) {
+	$start: 7 * $index - 6;
+	$end: 7 * $index - 1;
+	$hex: "#" + str_slice( $hexset, $start, $end );
+
+	@return unquote( $hex );
+}
+
+$color1: #2d2527; // raisin black
+$color2: #7c2430; // claret
+$color3: #8c4649; // spicy mix
+$color4: #7a343c; // catawba
+
+$white-semitrans: rgba(white, .5);
+$white-semitrans-less: rgba(white, .75);
+$white-semitrans-more: rgba(white, .25);

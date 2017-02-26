@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+@import "compass"; // http://compass-style.org/
+@import "partials/_variables.scss"; // color scheme, typography...
+@import "partials/_mixins.scss"; // mixins
+
+.ui-selectmenu-button {
+	outline: 0;
+	
+    &:hover {
+        background: shade($color2, 15);
+    }
+}
+
+.ui-selectmenu-menu {
+	background: $color2;
+	box-shadow: 0 2px 3px rgba(20, 20, 20, 1);
+	color: $white-semitrans-less;
+
+	.ui-menu-item {
+		transition: all 0.1s linear;
+		transition-property: background, color;
+
+		&:hover {
+			background: white;
+			color: $color2;
+		}
+
+		&:not(:first-child) {
+			border-top: 1px solid shade($color2, 15);
+		}
+	}
+
+	.ui-menu-item-wrapper {
+	    padding: .5rem 1rem;
+	}
+}
+
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+	margin: 0;
+}

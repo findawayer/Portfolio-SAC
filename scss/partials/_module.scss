@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* 모듈
+   -------------------------------------------------- */
+
+/* 플로팅 요소들의 컨테이너 */
+.group::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.img-fluid {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+}
+
+a.no-underline {
+    &:focus,
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+.crsl-items {
+    position: relative;
+
+    &:hover {
+        .crsl-nav a {
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+    }
+}
+
+.crsl-item {
+    margin: 0;
+
+    /* carousel JS가 로드되기 전엔 이미지 감춤 */
+    &:not([style]) {
+        img {
+            visibility: hidden;
+        }
+    }
+}
+
+.crsl-nav {
+    a {
+        display: block;
+        width: 32px;
+        height: 64px;
+        position: absolute;
+        top: 50%;
+        margin-top: -32px;
+        border: 1px solid rgba(#7c2430, .75);
+        opacity: 0;
+        transition: all .4s ease-out;
+
+        &.previous {
+            left: 0;
+            background: rgba(#7c2430, .5) url(../img/ui/left-chevron-fff.svg) no-repeat scroll center;
+            background: {
+                clip: padding-box;
+                size: 24px 24px;
+            }
+            border-left: none;
+            @include transform(translateX(-100%));
+        }
+        &.next {
+            right: 0;
+            background: rgba(#7c2430, .5) url(../img/ui/right-chevron-fff.svg) no-repeat scroll center;
+            background: {
+                clip: padding-box;
+                size: 24px 24px;
+            }
+            border-right: none;
+            @include transform(translateX(100%));
+        }
+    }
+}
+
+.inline-fix {
+    font-size: 0;
+
+    > * {
+        font-size: 1rem;
+    }
+}

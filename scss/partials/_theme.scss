@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+/* 헤더 영역
+   -------------------------------------------------- */
+.header-nav-upper {
+    background: $color2;
+    color: $white-semitrans-less;
+
+    .nav-cell {
+        border: 0px solid tint($color2, 10);
+        border-left-width: 1px;
+
+        &:last-child:not(.search) {
+            border-right-width: 1px;
+        }
+    }
+
+    .nav-link {
+        color: inherit;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 1rem;
+
+        &:hover {
+            background: shade($color2, 15);
+        }
+    }
+
+    .dropdown-menu {
+        background: $color2;
+    }
+
+    .dropdown-item {
+        color: $white-semitrans-less;
+
+        &:hover {
+            color: $color2;
+        }
+
+        &:not(:first-child) {
+            border-top-color: shade($color2, 15);
+        }
+    }
+
+    .ui-selectmenu-button {
+        float: left;
+        width: auto;
+        height: 32px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0 1rem;
+        background: transparent url(../img/ui/down-chevron-fff.svg) no-repeat scroll 70px center;
+        background-size: 8px 8px;
+        color: inherit;
+
+        &:hover {
+            background-color: shade($color2, 15);
+        }
+    }
+
+    .search-field {
+        background: shade($color2, 20);
+
+        input,
+        button,
+        button:focus,
+        button:active {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            color: white;
+            height: 32px;
+        }
+    }
+}
+
+.header-nav-lower {
+    height: 80px;
+
+    .navbar-logo {
+        margin: 0;
+    }
+
+    .content-nav {
+        padding: 20px 0 0;
+        white-space: nowrap;
+        font-size: 0; /* responsive fix */
+
+        .nav-link {
+            height: 40px;
+            padding: 11px 0;
+
+            img {
+                display: block;
+            }
+        }
+
+        li + li {
+            margin-left: calc(1rem + 2%);
+        }
+    }
+
+    .navbar-toggler {
+        width: 30px;
+        height: 30px; /* = logo's height */
+        padding: 6px 0 5px;
+        background: none;
+        border: none;
+
+        > span {
+            display: block;
+            background: white;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            margin: 0 auto 5px;
+        }
+    }
+}
+
+#mMenu {
+    box-shadow: 0 2px 3px rgba(black, .3);
+    position: relative;
+    z-index: 1000;
+
+    > nav {
+        padding: 15px 10%;
+        background: $color2;
+        color: $white-semitrans;
+        font-size: 1.1rem;
+    }
+
+    .navbar-nav {
+        .divider {
+            width: 100%;
+            height: 1px;
+            margin: 10px 0;
+        }
+    }
+
+    .nav-link {
+        padding: .5rem 0;
+    }
+
+    .search-form {
+        margin: 0 auto;
+        max-width: 320px;
+        padding: 1rem 0 .5rem;
+        position: relative;
+
+        input {
+            background: none;
+            border: none;
+            border: {
+                bottom: 1px dotted $white-semitrans-more;
+                radius: initial;
+            }
+            color: white;
+            padding: .5rem .25rem;
+            width: 100% !important;
+        }
+
+        label {
+            line-height: 1;
+            position: absolute;
+            top: 1.5rem;
+            left: .25rem;
+            color: inherit;
+            cursor: text;
+        }
+    }
+
+    .dropdown {
+        a {
+            color: $white-semitrans-less;
+
+            &:hover {
+                color: $white-semitrans;
+            }
+        }
+    }
+
+    .dropdown-toggle {
+
+        &::after {
+            margin-left: .5em;
+        }
+    }
+
+    .dropdown-menu {
+        background: none;
+        border: {
+            width: 0;
+            radius: 0;
+        }
+        color: inherit;
+    }
+
+    .dropdown-item {
+        color: inherit;
+
+        &:hover {
+            background: none;
+            color: $white-semitrans-less;
+        }
+    }
+}
+
+/* 메인 영역
+   -------------------------------------------------- */
+#content {
+    h2 {
+        position: relative;
+        margin: 0 0 1rem;
+
+        > * {
+
+            &.more {
+                font: {
+                    size: .92rem;
+                    weight: normal;
+                }
+                color: $color4;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+/* 주요 이벤트 정보 (슬라이더) */
+#featured {
+    position: relative;
+
+    .crsl {
+        &-item-caption {
+            @include background-image( linear-gradient( transparent, rgba(black, .75) ) );
+            padding: 30% 1.5rem 1.5rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            h3 {
+                color: white;
+                margin: 0;
+            }
+            p {
+                color: $white-semitrans;
+                font-size: 1.1rem;
+                margin: .25em 0 0;
+            }
+        }
+    }
+}
+
+
+/* 공연/전시 일정 */
+.schedule {
+    .card {
+        border: none;
+        box-shadow: 0 1px 2px 1px rgba(0,0,0,0.1);
+        padding: 0 0 1.25rem;
+        
+        .info {
+            padding: 0 1.25rem;
+        }
+
+        hr::after {
+            content: attr(data-text);
+            padding: 0 1em;
+            position: absolute;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            background: white;
+            color: #ccc;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: $base-font-color;
+        }
+
+        ul {
+            color: #8a8c8f;
+        }
+    }
+}
+
+/* 예술의전당 소식 (게시판) */
+.board {
+    .table {
+        border: solid rgba(0,0,0,.125);
+        border: {
+            collapse: separate;
+            spacing: 0;
+            width: 1px 0;
+        }
+        table-layout: fixed;
+        padding: 10px 0;
+
+        th, td {
+            border: none;
+            padding: .25rem;
+        }
+
+        a {
+           color: inherit;
+        }
+    }
+}
+
+
+/* 프로모션 (슬라이더) */
+#promotions {
+    max-width: 340px;
+
+    figcaption {
+        background: $color3;
+        color: white;
+        padding: .25rem;
+    }
+}

@@ -193,6 +193,7 @@
             width: 0;
             radius: 0;
         }
+        box-shadow: none;
         color: inherit;
     }
 
@@ -202,6 +203,10 @@
         &:hover {
             background: none;
             color: $white-semitrans-less;
+        }
+
+        &:not(:first-child) {
+            border: 0;
         }
     }
 }

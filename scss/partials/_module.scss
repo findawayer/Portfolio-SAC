@@ -3,69 +3,65 @@
 /* 모듈
    -------------------------------------------------- */
 
-/* 플로팅 요소들의 컨테이너 */
-.group::after {
-    clear: both;
-    content: "";
-    display: table;
+// 플로팅 요소들의 컨테이너
+.group {
+    &::after {
+        clear: both;
+        display: table;
+        content: "";
+    }
 }
 
+// relative 포지셔닝
 .pos-rel {
     position: relative;
 }
 
+// 반응형 이미지
 .img-fluid {
     display: block;
     max-width: 100%;
     margin: 0;
 }
 
-a.no-underline {
+// 링크가 가진 마우스오버시의 밑줄 제거
+.no-underline {
     &:focus,
     &:hover {
         text-decoration: none !important;
     }
 }
 
-.crsl-items {
-    position: relative;
-
-    &:hover {
-        .crsl-nav a {
-            opacity: 1;
-            @include transform(translateX(0));
-        }
-    }
-}
-
-.crsl-item {
-    margin: 0;
-
-    /* carousel JS가 로드되기 전엔 이미지 감춤 */
-    &:not([style]) {
-        img {
-            visibility: hidden;
-        }
-    }
-
-    &-caption {
-        display: block;
-    }
-}
-
-.crsl-nav {
-    margin-top: 1em;
-
-    &.playing .play,
-    &:not(.playing) .pause {
-        display: none;
-    }
-}
-
+// `inline-block` 요소들 사이에 불필요한 스페이스 제거
 .inline-fix {
     font-size: 0;
 
     > * {
         font-size: 1rem;
+    }
+}
+
+// 캐루슬의 공통 세팅
+.crsl {
+    margin: 0 -5px;
+
+    // 각 슬라이드
+    &-slide {
+        margin: 0;
+        padding: 0 5px;
+
+        &-caption {
+            display: block;
+        }
+    }
+
+    // 내비게이션
+    &-navigation {
+        margin-top: 1em;
+
+        &.playing [data-action="play"],
+        &:not(.playing) [data-action="pause"] {
+            display: none;
+        }
     }
 }

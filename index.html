@@ -23,15 +23,8 @@
     <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui-theme.min.css">
     <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Favicons: generated from http://realfavicongenerator.net -->
-    <link rel="shortcut icon" href="#">
-    <link rel="apple-touch-icon" href="#">
-    <link rel="apple-touch-icon" sizes="72x72" href="#">
-    <link rel="apple-touch-icon" sizes="114x114" href="#">
-    <link rel="icon" sizes="16x16" href="#">
-    <link rel="icon" sizes="32x32" href="#">
-    <link rel="icon" sizes="48x48" href="#">
 
 </head>
 <body>
@@ -267,80 +260,78 @@
     <aside role="complementary" id="featured" class="container mb-3">
 
         <!-- 슬라이더 -->
-        <div id="featuredSlider" role="listbox" class="crsl-items" data-navigation="featuredNav" aria-label="featured events" aria-live="polite">
-            <div class="crsl-wrap group">
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="예술의전당 제야음악회" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_yearendconcert.png" alt="2016 예술의전당 제야음악회">
-                        <span class="crsl-item-caption">
-                            <h3>2016 예술의전당 제야음악회</h3>
-                            <p>2016. 12. 31. (토) 콘서트홀</p>
-                        </span>
-                    </a>
-                </article>
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="위대한 낙서 The Great Graffity 전" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_greatgraffity.png" alt="위대한 낙서 The Great Graffity 전">
-                        <span class="crsl-item-caption">
-                            <h3>위대한 낙서 The Great Graffity 展</h3>
-                            <p>2016. 12. 9. (금) - 2017. 2. 6. (일) 서예박물관</p>
-                        </span>
-                    </a>
-                </article>
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="2017 빈 소년 합창단 신년음악회" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_wienboyschoir.png" alt="2017 빈 소년 합창단 신년음악회">
-                        <span class="crsl-item-caption">
-                            <h3>2017 빈 소년 합창단 신년음악회</h3>
-                            <p>2017. 1. 21. (토) - 22. (일) 콘서트홀</p>
-                        </span>
-                    </a>
-                </article>
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="인문아카데미 전시특강 수강생모집" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_lecorbusier.png" alt="인문아카데미 전시특강 수강생모집">
-                        <span class="crsl-item-caption">
-                            <h3>인문아카데미 전시특강 수강생모집</h3>
-                            <p>2016. 11. 3. (목) - 선착순마감</p>
-                        </span>
-                    </a>
-                </article>
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="베르나르 베르베르의 연극 <인간>" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_bernardhuman.png" alt="베르나르 베르베르의 연극 <인간>">
-                        <span class="crsl-item-caption">
-                            <h3>베르나르 베르베르의 연극 &lt;인간&gt;</h3>
-                            <p>2016. 12. 16. (금) - 2017. 3. 5. (일) 자유소극장</p>
-                        </span>
-                    </a>
-                </article>
-                <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#" title="빈 슈트라우스 페스티벌 오케스트라 신년음악회" tabindex="-1">
-                        <img class="img-fluid" src="img/slider/thumb_straussfestival.png" alt="빈 슈트라우스 페스티벌 오케스트라 신년음악회">
-                        <span class="crsl-item-caption">
-                            <h3>슈트라우스 페스티벌 오케스트라 신년음악회</h3>
-                            <p>2017. 1. 19. (목) 콘서트홀</p>
-                        </span>
-                    </a>
-                </article>
-            </div>
-
-            <!-- 슬라이더 컨트롤 -->
-            <nav id="featuredNav" class="crsl-nav nav nav-inline text-xs-center playing" aria-label="slider control" aria-controls="featuredSlider">
-                <a role="button" class="nav-link previous" href="#" title="이전 슬라이드">
-                    <img src="img/ui/clear-left.svg" width="24" height="24" alt="이전 슬라이드">
+        <div id="featuredCarousel" class="crsl">
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="예술의전당 제야음악회">
+                    <img class="img-fluid" src="img/slider/thumb_yearendconcert.png" alt="2016 예술의전당 제야음악회">
+                    <span class="crsl-slide-caption">
+                        <h3>2016 예술의전당 제야음악회</h3>
+                        <p>2016. 12. 31. (토) 콘서트홀</p>
+                    </span>
                 </a>
-                <a role="button" class="nav-link pause" href="#" title="슬라이드 멈춤">
-                    <img src="img/ui/clear-pause.svg" width="24" height="24" alt="슬라이드 멈춤">
+            </article>
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="위대한 낙서 The Great Graffity 전">
+                    <img class="img-fluid" src="img/slider/thumb_greatgraffity.png" alt="위대한 낙서 The Great Graffity 전">
+                    <span class="crsl-slide-caption">
+                        <h3>위대한 낙서 The Great Graffity 展</h3>
+                        <p>2016. 12. 9. (금) - 2017. 2. 6. (일) 서예박물관</p>
+                    </span>
                 </a>
-                <a role="button" class="nav-link play" href="#" title="슬라이드 재생">
-                    <img src="img/ui/clear-play.svg" width="24" height="24" alt="슬라이드 재생">
+            </article>
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="2017 빈 소년 합창단 신년음악회">
+                    <img class="img-fluid" src="img/slider/thumb_wienboyschoir.png" alt="2017 빈 소년 합창단 신년음악회">
+                    <span class="crsl-slide-caption">
+                        <h3>2017 빈 소년 합창단 신년음악회</h3>
+                        <p>2017. 1. 21. (토) - 22. (일) 콘서트홀</p>
+                    </span>
                 </a>
-                <a role="button" class="nav-link next" href="#" title="다음 슬라이드">
-                    <img src="img/ui/clear-right.svg" width="24" height="24" alt="다음 슬라이드">
+            </article>
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="인문아카데미 전시특강 수강생모집">
+                    <img class="img-fluid" src="img/slider/thumb_lecorbusier.png" alt="인문아카데미 전시특강 수강생모집">
+                    <span class="crsl-slide-caption">
+                        <h3>인문아카데미 전시특강 수강생모집</h3>
+                        <p>2016. 11. 3. (목) - 선착순마감</p>
+                    </span>
                 </a>
-            </nav>
+            </article>
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="베르나르 베르베르의 연극 <인간>">
+                    <img class="img-fluid" src="img/slider/thumb_bernardhuman.png" alt="베르나르 베르베르의 연극 <인간>">
+                    <span class="crsl-slide-caption">
+                        <h3>베르나르 베르베르의 연극 &lt;인간&gt;</h3>
+                        <p>2016. 12. 16. (금) - 2017. 3. 5. (일) 자유소극장</p>
+                    </span>
+                </a>
+            </article>
+            <article class="crsl-slide">
+                <a class="d-block" href="#" title="빈 슈트라우스 페스티벌 오케스트라 신년음악회">
+                    <img class="img-fluid" src="img/slider/thumb_straussfestival.png" alt="빈 슈트라우스 페스티벌 오케스트라 신년음악회">
+                    <span class="crsl-slide-caption">
+                        <h3>슈트라우스 페스티벌 오케스트라 신년음악회</h3>
+                        <p>2017. 1. 19. (목) 콘서트홀</p>
+                    </span>
+                </a>
+            </article>
         </div>
+
+        <!-- 슬라이더 컨트롤 -->
+        <nav id="featuredNav" class="crsl-navigation nav nav-inline text-xs-center playing" aria-label="slider control" aria-controls="featuredCarousel">
+            <a role="button" class="crsl-button nav-link" href="#" title="이전 슬라이드" data-action="prev">
+                <img src="img/ui/clear-left.svg" width="24" height="24" alt="이전 슬라이드">
+            </a>
+            <a role="button" class="crsl-button nav-link" href="#" title="슬라이드 멈춤" data-action="pause">
+                <img src="img/ui/clear-pause.svg" width="24" height="24" alt="슬라이드 멈춤">
+            </a>
+            <a role="button" class="crsl-button nav-link" href="#" title="슬라이드 재생" data-action="play">
+                <img src="img/ui/clear-play.svg" width="24" height="24" alt="슬라이드 재생">
+            </a>
+            <a role="button" class="crsl-button nav-link" href="#" title="다음 슬라이드" data-action="next">
+                <img src="img/ui/clear-right.svg" width="24" height="24" alt="다음 슬라이드">
+            </a>
+        </nav>
 
     </aside>
 
@@ -524,46 +515,46 @@
                     </h2>
 
                     <!-- 슬라이더 -->
-                    <div id="promotions" role="listbox" class="crsl-items mx-auto" data-navigation="promotionsNav" aria-live="polite">
-                        <div class="crsl-wrap group">
-                            <figure class="crsl-item" aria-hidden="true">
+                    <div id="promotions" class="mx-auto">
+                        <div id="promotionsCarousel" class="crsl">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo01.png" alt="월간 eBook 1월호">
                                 <figcaption class="text-xs-center">월간 eBook 1월호</figcaption>
                             </figure>
-                            <figure class="crsl-item" aria-hidden="true">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo02.png" alt="골든듀 홀리데이 이벤트">
                                 <figcaption class="text-xs-center">골든듀 홀리데이 이벤트</figcaption>
                             </figure>
-                            <figure class="crsl-item" aria-hidden="true">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo03.png" alt="어린이예술단 후원회원">
                                 <figcaption class="text-xs-center">어린이예술단 후원회원</figcaption>
                             </figure>
-                            <figure class="crsl-item" aria-hidden="true">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo04.png" alt="무료 리허설 관람 신청">
                                 <figcaption class="text-xs-center">무료 리허설 관람 신청</figcaption>
                             </figure>
-                            <figure class="crsl-item" aria-hidden="true">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo05.png" alt="예술의전당 아이스링크 개장">
                                 <figcaption class="text-xs-center">예술의전당 아이스링크 개장</figcaption>
                             </figure>
-                            <figure class="crsl-item" aria-hidden="true">
+                            <figure class="crsl-slide">
                                 <img class="img-fluid" src="img/promo/promo06.png" alt="수험생할인 공연, 전시">
                                 <figcaption class="text-xs-center">수험생할인 공연 &sdot; 전시</figcaption>
                             </figure>
                         </div>
 
                         <!-- 슬라이더 컨트롤 -->
-                        <nav id="promotionsNav" class="crsl-nav nav nav-inline text-xs-center playing" aria-label="slider control" aria-controls="featuredSlider">
-                            <a role="button" class="nav-link previous" href="#" title="이전 슬라이드">
+                        <nav id="promotionsNav" class="crsl-navigation nav nav-inline text-xs-center playing" aria-label="slider control" aria-controls="promotionsCarousel">
+                            <a role="button" class="crsl-button nav-link" href="#" title="이전 슬라이드" data-action="prev">
                                 <img src="img/ui/clear-left.svg" width="24" height="24" alt="이전 슬라이드">
                             </a>
-                            <a role="button" class="nav-link pause" href="#" title="슬라이드 멈춤">
+                            <a role="button" class="crsl-button nav-link" href="#" title="슬라이드 멈춤" data-action="pause">
                                 <img src="img/ui/clear-pause.svg" width="24" height="24" alt="슬라이드 멈춤">
                             </a>
-                            <a role="button" class="nav-link play" href="#" title="슬라이드 재생">
+                            <a role="button" class="crsl-button nav-link" href="#" title="슬라이드 재생" data-action="play">
                                 <img src="img/ui/clear-play.svg" width="24" height="24" alt="슬라이드 재생">
                             </a>
-                            <a role="button" class="nav-link next" href="#" title="다음 슬라이드">
+                            <a role="button" class="crsl-button nav-link" href="#" title="다음 슬라이드" data-action="next">
                                 <img src="img/ui/clear-right.svg" width="24" height="24" alt="다음 슬라이드">
                             </a>
                         </nav>
@@ -673,13 +664,13 @@
     <script type="text/javascript" src="plugins/jquery/jquery-3.1.1.min.js"></script>
     <!-- jQuery UI custom build -->
     <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Tether 1.3.7 (Bootstrap tooltip's dependency) -->
+    <!-- Tether 1.3.7 (required for Bootstrap tooltip) -->
     <script type="text/javascript" src="plugins/tether/js/tether.min.js"></script>
     <!-- Bootstrap 4.0.0-alpha -->
     <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="plugins/responsiveCarousel/responsiveCarousel.js"></script>
     <!-- Custom JavaScripts -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
 
 </body>
 

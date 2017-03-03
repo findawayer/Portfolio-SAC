@@ -21,17 +21,17 @@
             pauseOnFocus: true,
             responsive: [
                 {
-                    breakpoint: 767, // = Bootstrap `sm`
+                    breakpoint: 991, // = Bootstrap `md`
                     settings: {
-                        slideToShow: 2,
-                        slideToScroll: 2
+                        slidesToShow: 2,
+                        slidesToScroll: 2
                     }
                 },
                 {
-                    breakpoint: 543, // = Bootstrap `xs`
+                    breakpoint: 767, // = Bootstrap `sm`
                     settings: {
-                        slideToShow: 1,
-                        slideToScroll: 1,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
                         autoplay: false
                     }
                 }

@@ -47,40 +47,18 @@ a.no-underline {
             visibility: hidden;
         }
     }
+
+    &-caption {
+        display: block;
+    }
 }
 
 .crsl-nav {
-    a {
-        display: block;
-        width: 32px;
-        height: 64px;
-        position: absolute;
-        top: 50%;
-        margin-top: -32px;
-        border: 1px solid rgba(#7c2430, .75);
-        opacity: 0;
-        transition: all .4s ease-out;
+    margin-top: 1em;
 
-        &.previous {
-            left: 0;
-            background: rgba(#7c2430, .5) url(../img/ui/left-chevron-fff.svg) no-repeat scroll center;
-            background: {
-                clip: padding-box;
-                size: 24px 24px;
-            }
-            border-left: none;
-            @include transform(translateX(-100%));
-        }
-        &.next {
-            right: 0;
-            background: rgba(#7c2430, .5) url(../img/ui/right-chevron-fff.svg) no-repeat scroll center;
-            background: {
-                clip: padding-box;
-                size: 24px 24px;
-            }
-            border-right: none;
-            @include transform(translateX(100%));
-        }
+    &.playing .play,
+    &:not(.playing) .pause {
+        display: none;
     }
 }
 

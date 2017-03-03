@@ -32,15 +32,15 @@
     <link rel="icon" sizes="16x16" href="#">
     <link rel="icon" sizes="32x32" href="#">
     <link rel="icon" sizes="48x48" href="#">
-    <!-- jQuery 3.1.1 (Bootstrap's dependency) -->
+    <!-- jQuery 3.1.1 -->
     <script type="text/javascript" src="plugins/jquery/jquery-3.1.1.min.js"></script>
-    <!-- Tether 1.3.7 (Bootstrap tooltip's dependency) -->
-    <script type="text/javascript" src="plugins/tether/js/tether.min.js"></script>
-    <!-- Bootstrap 4.0.0-alpha.5: JS -->
-    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="plugins/responsiveCarousel/responsiveCarousel.js"></script>
     <!-- jQuery UI custom build -->
     <script type="text/javascript" src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Tether 1.3.7 (Bootstrap tooltip's dependency) -->
+    <script type="text/javascript" src="plugins/tether/js/tether.min.js"></script>
+    <!-- Bootstrap 4.0.0-alpha -->
+    <script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="plugins/responsiveCarousel/responsiveCarousel.min.js"></script>
 
 </head>
 <body>
@@ -88,7 +88,7 @@
                                 <label for="searchField" class="sr-only">검색 상자</label>
                                 <span class="input-group-btn">
                                     <button role="button" class="btn btn-secondary" type="button">
-                                        <img role="presentation" src="img/ui/search.svg" width="16" height="16" alt="검색" aria-hidden="true">
+                                        <img src="img/ui/search.svg" width="16" height="16" alt="검색">
                                     </button>
                                 </span>
                             </div>
@@ -101,10 +101,9 @@
             <div role="presentation" class="container pos-rel group">
                 <!-- 로고 -->
                 <h1 class="navbar-logo float-xs-left">
-                    <a role="button" href="#">
-                        <img role="presentation" class="hidden-md-down" src="img/logo-default.svg" width="180" height="60" alt="예술의 전당">
-                        <img role="presentation" class="hidden-lg-up" src="img/logo-typeA-fff.svg" width="150" height="30" alt="예술의 전당">
-                        <span class="sr-only">예술의 전당</span>
+                    <a role="button" href="#" title="예술의 전당">
+                        <img class="hidden-md-down" src="img/logo-default.svg" width="180" height="60" alt="예술의 전당">
+                        <img class="hidden-lg-up" src="img/logo-typeA-fff.svg" width="150" height="30" alt="" aria-hidden="true">
                     </a>
                 </h1>
 
@@ -183,16 +182,17 @@
                 </ul>
 
                 <!-- 모바일용 메뉴 트리거 -->
-                <a role="button" class="navbar-toggler float-xs-right hidden-lg-up" data-toggle="collapse" data-target="#mMenu" aria-controls="mMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <a role="button" class="navbar-toggler float-xs-right hidden-lg-up text-hide" data-toggle="collapse" data-target="#mMenu" aria-controls="mMenu" aria-expanded="false">
+                    <span role="presentation" aria-hidden="true"></span>
+                    <span role="presentation" aria-hidden="true"></span>
+                    <span role="presentation" aria-hidden="true"></span>
+                    메뉴
                 </a>
             </div>
         </nav>
 
         <!-- 모바일용 슬라이드다운 메뉴 -->
-        <div role="presentation" id="mMenu" class="navbar-toggleable-md collapse hidden-lg-up">
+        <div role="presentation" id="mMenu" class="navbar-toggleable-md collapse hidden-lg-up" aria-hidden="true">
             <nav class="navbar">
                 <!-- 검색 폼 -->
                 <form role="search" id="mSearchForm" class="form-inline search-form">
@@ -279,68 +279,74 @@
         <div id="featuredSlider" role="listbox" class="crsl-items" data-navigation="featuredNav" aria-label="featured events" aria-live="polite">
             <div class="crsl-wrap group">
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_yearendconcert.png" alt="2016 예술의전당 제야음악회">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="예술의전당 제야음악회" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_yearendconcert.png" alt="2016 예술의전당 제야음악회">
+                        <span class="crsl-item-caption">
                             <h3>2016 예술의전당 제야음악회</h3>
                             <p>2016. 12. 31. (토) 콘서트홀</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_greatgraffity.png" alt="위대한 낙서 The Great Graffity 전">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="위대한 낙서 The Great Graffity 전" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_greatgraffity.png" alt="위대한 낙서 The Great Graffity 전">
+                        <span class="crsl-item-caption">
                             <h3>위대한 낙서 The Great Graffity 展</h3>
                             <p>2016. 12. 9. (금) - 2017. 2. 6. (일) 서예박물관</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_wienboyschoir.png" alt="2017 빈 소년 합창단 신년음악회">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="2017 빈 소년 합창단 신년음악회" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_wienboyschoir.png" alt="2017 빈 소년 합창단 신년음악회">
+                        <span class="crsl-item-caption">
                             <h3>2017 빈 소년 합창단 신년음악회</h3>
                             <p>2017. 1. 21. (토) - 22. (일) 콘서트홀</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_lecorbusier.png" alt="인문아카데미 전시특강 수강생모집">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="인문아카데미 전시특강 수강생모집" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_lecorbusier.png" alt="인문아카데미 전시특강 수강생모집">
+                        <span class="crsl-item-caption">
                             <h3>인문아카데미 전시특강 수강생모집</h3>
                             <p>2016. 11. 3. (목) - 선착순마감</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_bernardhuman.png" alt="베르나르 베르베르의 연극 <인간>">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="베르나르 베르베르의 연극 <인간>" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_bernardhuman.png" alt="베르나르 베르베르의 연극 <인간>">
+                        <span class="crsl-item-caption">
                             <h3>베르나르 베르베르의 연극 &lt;인간&gt;</h3>
                             <p>2016. 12. 16. (금) - 2017. 3. 5. (일) 자유소극장</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
                 <article class="crsl-item" aria-hidden="true">
-                    <a class="d-block" href="#">
-                        <img role="presentation" class="img-fluid" src="img/slider/thumb_straussfestival.png" alt="빈 슈트라우스 페스티벌 오케스트라 신년음악회">
-                        <div class="crsl-item-caption">
+                    <a class="d-block" href="#" title="빈 슈트라우스 페스티벌 오케스트라 신년음악회" tabindex="-1">
+                        <img class="img-fluid" src="img/slider/thumb_straussfestival.png" alt="빈 슈트라우스 페스티벌 오케스트라 신년음악회">
+                        <span class="crsl-item-caption">
                             <h3>슈트라우스 페스티벌 오케스트라 신년음악회</h3>
                             <p>2017. 1. 19. (목) 콘서트홀</p>
-                        </div>
+                        </span>
                     </a>
                 </article>
             </div>
 
             <!-- 슬라이더 컨트롤 -->
             <nav id="featuredNav" class="crsl-nav nav nav-inline text-xs-center" aria-label="slider control" aria-controls="featuredSlider">
-                <a role="button" class="previous nav-link" href="#">
-                    <span class="sr-only">이전 슬라이드</span>
+                <a role="button" class="nav-link previous" href="#" title="이전 슬라이드">
+                    <img src="img/ui/clear-left.svg" width="24" height="24" alt="이전 슬라이드">
                 </a>
-                <a role="button" class="next nav-link" href="#">
-                    <span class="sr-only">다음 슬라이드</span>
+                <a role="button" class="nav-link pause" href="#" title="슬라이드 멈춤">
+                    <img src="img/ui/clear-pause.svg" width="24" height="24" alt="슬라이드 멈춤">
+                </a>
+                <a role="button" class="nav-link play" href="#" title="슬라이드 재생">
+                    <img src="img/ui/clear-play.svg" width="24" height="24" alt="슬라이드 재생">
+                </a>
+                <a role="button" class="nav-link next" href="#" title="다음 슬라이드">
+                    <img src="img/ui/clear-right.svg" width="24" height="24" alt="다음 슬라이드">
                 </a>
             </nav>
         </div>
@@ -362,9 +368,9 @@
                     </h2>
                     <div class="row text-xs-center">
                         <div class="col-sm-4">
-                            <a class="card card-block group no-underline" href="#">
+                            <a class="card card-block group no-underline" href="#" title="오페라하우스 공연/전시 일정">
                                 <div class="thumb float-xs-left float-sm-none">
-                                    <img class="img-fluid" src="img/main/area1.png" alt="오페라하우스">
+                                    <img class="img-fluid" src="img/main/area1.png" alt="오페라하우스의 발레 공연">
                                 </div>
                                 <div class="info">
                                     <hr class="my-2 pos-rel" data-text="performance">
@@ -378,9 +384,9 @@
                             </a>
                         </div>
                         <div class="col-sm-4">
-                            <a class="card card-block group no-underline" href="#">
+                            <a class="card card-block group no-underline" href="#" title="음악당 공연/전시 일정">
                                 <div class="thumb float-xs-left float-sm-none">
-                                    <img class="img-fluid" src="img/main/area2.png" alt="음악당">
+                                    <img class="img-fluid" src="img/main/area2.png" alt="슈트라우스 페스티벌의 지휘자">
                                 </div>
                                 <div class="info">
                                     <hr class="my-2 pos-rel" data-text="performance">
@@ -394,9 +400,9 @@
                             </a>
                         </div>
                         <div class="col-sm-4">
-                            <a class="card card-block group no-underline" href="#">
+                            <a class="card card-block group no-underline" href="#" title="미술관 공연/전시 일정">
                                 <div class="thumb float-xs-left float-sm-none">
-                                    <img class="img-fluid" src="img/main/area3.png" alt="미술관">
+                                    <img class="img-fluid" src="img/main/area3.png" alt="인상파의 고향, 노르망디">
                                 </div>
                                 <div class="info">
                                     <hr class="my-2 pos-rel" data-text="exhibition">
@@ -426,6 +432,11 @@
                             <col style="width: 4em;">
                             <col>
                         </colgroup>
+                        <thead class="sr-only">
+                            <th>날짜</th>
+                            <th>분류</th>
+                            <th>소식</th>
+                        </thead>
                         <tbody>
                             <tr class="new">
                                 <td>2016. 12. 27.</td>
@@ -475,8 +486,8 @@
                         <img src="img/main/heading3.png" alt="Enjoy SAC">
                     </h2>
                     <div class="text-xs-center">
-                        <a href="http://www.sac.or.kr/contents/index.jsp">
-                            <img class="img-fluid" src="img/enjoy-sac.png" alt="enjoy sac">
+                        <a href="http://www.sac.or.kr/contents/index.jsp" title="enjoy SAC, 예술의 전당 온라인 매거진">
+                            <img class="img-fluid" src="img/enjoy-sac.png" alt="enjoy SAC, 예술의 전당 온라인 매거진">
                         </a>
                     </div>
                     <!--
@@ -523,40 +534,46 @@
 
                     <!-- 슬라이더 -->
                     <div id="promotions" role="listbox" class="crsl-items mx-auto" data-navigation="promotionsNav" aria-live="polite">
-                        <div class="crsl-wrap">
+                        <div class="crsl-wrap group">
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo01.png" alt="월간 eBook 1월호">
+                                <img class="img-fluid" src="img/promo/promo01.png" alt="월간 eBook 1월호">
                                 <figcaption class="text-xs-center">월간 eBook 1월호</figcaption>
                             </figure>
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo02.png" alt="골든듀 홀리데이 이벤트">
+                                <img class="img-fluid" src="img/promo/promo02.png" alt="골든듀 홀리데이 이벤트">
                                 <figcaption class="text-xs-center">골든듀 홀리데이 이벤트</figcaption>
                             </figure>
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo03.png" alt="어린이예술단 후원회원">
+                                <img class="img-fluid" src="img/promo/promo03.png" alt="어린이예술단 후원회원">
                                 <figcaption class="text-xs-center">어린이예술단 후원회원</figcaption>
                             </figure>
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo04.png" alt="무료 리허설 관람 신청">
+                                <img class="img-fluid" src="img/promo/promo04.png" alt="무료 리허설 관람 신청">
                                 <figcaption class="text-xs-center">무료 리허설 관람 신청</figcaption>
                             </figure>
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo05.png" alt="예술의전당 아이스링크 개장">
+                                <img class="img-fluid" src="img/promo/promo05.png" alt="예술의전당 아이스링크 개장">
                                 <figcaption class="text-xs-center">예술의전당 아이스링크 개장</figcaption>
                             </figure>
                             <figure class="crsl-item" aria-hidden="true">
-                                <img role="presentation" class="img-fluid" src="img/promo/promo06.png" alt="수험생할인 공연, 전시">
+                                <img class="img-fluid" src="img/promo/promo06.png" alt="수험생할인 공연, 전시">
                                 <figcaption class="text-xs-center">수험생할인 공연 &sdot; 전시</figcaption>
                             </figure>
                         </div>
 
                         <!-- 슬라이더 컨트롤 -->
-                        <nav id="promotionsNav" class="crsl-nav nav nav-inline text-xs-center" aria-controls="promotions">
-                            <a role="button" class="previous nav-link" href="#">
-                                <span class="sr-only">이전 슬라이드</span>
+                        <nav id="promotionsNav" class="crsl-nav nav nav-inline text-xs-center" aria-label="slider control" aria-controls="featuredSlider">
+                            <a role="button" class="nav-link previous" href="#" title="이전 슬라이드">
+                                <img src="img/ui/clear-left.svg" width="24" height="24" alt="이전 슬라이드">
                             </a>
-                            <a role="button" class="next nav-link" href="#">
-                                <span class="sr-only">다음 슬라이드</span>
+                            <a role="button" class="nav-link pause" href="#" title="슬라이드 멈춤">
+                                <img src="img/ui/clear-pause.svg" width="24" height="24" alt="슬라이드 멈춤">
+                            </a>
+                            <a role="button" class="nav-link play" href="#" title="슬라이드 재생">
+                                <img src="img/ui/clear-play.svg" width="24" height="24" alt="슬라이드 재생">
+                            </a>
+                            <a role="button" class="nav-link next" href="#" title="다음 슬라이드">
+                                <img src="img/ui/clear-right.svg" width="24" height="24" alt="다음 슬라이드">
                             </a>
                         </nav>
                     </div>
@@ -603,27 +620,27 @@
     <footer role="contentinfo" id="footer">
         <div class="container group">
             <div class="footer-logo col-lg-5 text-xs-center text-lg-left">
-                <img role="presentation" class="mb-1" src="img/logo-default-fff.svg" width="150" height="50" alt="예술의 전당">
+                <img class="mb-1" src="img/logo-default-fff.svg" width="150" height="50" alt="예술의 전당">
                 <address class="mb-1">(우) 06757, 서울시 서초구 남부순환로 2406 예술의전당<br>02-580-1300 (전화), 02-580-1588 (SMS)<br>사업자 등록번호 214-82-00264</address>
             </div>
 
-            <div class="clearfix hidden-lg-up"></div>
+            <div role="presentation" class="clearfix hidden-lg-up" aria-hidden="true"></div>
 
             <nav role="navigation" class="footer-nav col-lg-2 text-xs-center text-lg-left">
                 <ul class="list-unstyled">
-                    <li><a class="nav-link" href="#">오시는 길</a></li>
-                    <li><a class="nav-link" href="#">예술의전당 투어</a></li>
-                    <li><a class="nav-link" href="#">개인정보처리방침</a></li>
-                    <li><a class="nav-link" href="#">저작권보호정책</a></li>
-                    <li><a class="nav-link" href="#">유관기관</a></li>
+                    <li><a class="nav-link" href="#" title="예술의전당 방문시 교통편을 확인합니다.">오시는 길</a></li>
+                    <li><a class="nav-link" href="#" title="예술의전당에서 조직한 투어 프로그램을 소개합니다.">예술의전당 투어</a></li>
+                    <li><a class="nav-link" href="#" title="사이트에 등록된 개인정보의 처리 정책에 대해 소개합니다.">개인정보처리방침</a></li>
+                    <li><a class="nav-link" href="#" title="사이트 컨텐츠의 저작권 관련 정책에 대해 소개합니다.">저작권보호정책</a></li>
+                    <li><a class="nav-link" href="#" title="정부 유관기관을 열람합니다.">유관기관</a></li>
                 </ul>
             </nav>
 
-            <div class="clearfix hidden-lg-up"></div>
+            <div role="presentation" class="clearfix hidden-lg-up" aria-hidden="true"></div>
 
             <div role="navigation" class="col-lg-5 text-xs-center text-lg-right">
 
-                <a role="button" class="d-inline-block mb-1" href="#">
+                <a role="button" class="d-inline-block mb-1" href="#" title="이 사이트는 공공누리저작권에 의해 라이센싱되어 있습니다.">
                     <img src="img/KOGL-fff.svg" width="90" height="30" alt="공공누리저작권">
                 </a>
 
@@ -631,28 +648,28 @@
 
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a href="#">
-                            <img src="img/ui/social-twitter.svg" alt="" width="32" height="32">
+                        <a href="#" title="예술의전당 트위터">
+                            <img src="img/ui/social-twitter.svg" alt="예술의전당 트위터" width="32" height="32">
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <img src="img/ui/social-facebook.svg" alt="" width="32" height="32">
+                        <a href="#" title="예술의전당 페이스북">
+                            <img src="img/ui/social-facebook.svg" alt="예술의전당 페이스북" width="32" height="32">
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <img src="img/ui/social-instagram.svg" alt="" width="32" height="32">
+                        <a href="#" title="예술의전당 인스타그램">
+                            <img src="img/ui/social-instagram.svg" alt="예술의전당 인스타그램" width="32" height="32">
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <img src="img/ui/social-naverblog.svg" alt="" width="32" height="32">
+                        <a href="#" title="예술의전당 네이버 블로그">
+                            <img src="img/ui/social-naverblog.svg" alt="예술의전당 네이버 블로그" width="32" height="32">
                         </a>
                     </li>
                     <li class="list-inline-item ml-1">
-                        <a href="#">
-                            <img src="img/qr_sm.gif" alt="QR 코드">
+                        <a href="#" title="예술의전당 QR 코드">
+                            <img src="img/qr_sm.gif" alt="예술의전당 QR 코드">
                         </a>
                     </li>
                 </ul>

@@ -1,12 +1,10 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 @import "compass"; // http://compass-style.org/
 @import "partials/_variables.scss"; // color scheme, typography...
 @import "partials/_mixins.scss"; // mixins
 
 .ui-selectmenu-button {
-	outline: 0;
-	
     &:hover {
         background: shade($color2, 15);
     }

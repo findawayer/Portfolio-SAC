@@ -8,7 +8,7 @@
  * 1. Stop, Resume button added to the Carousel control
  * 2. .delegate() replaced by .on() since deprecated >jQuery 1.7
  * 3. $.fn.carousel replaced by $.fn.respCarousel to avoid possible conflicts
- * 4. added `aria-hidden` control
+ * 4. Accessibility control added
  */
 
 ;(function($) {
@@ -227,7 +227,7 @@
 						$navigation.removeClass('playing');
 					}
 					// Resume action
-					else if( $this.hasClass('resume') ) {
+					else if( $this.hasClass('play') ) {
 						obj.rotate();
 						obj.initRotate();
 						$navigation.addClass('playing');

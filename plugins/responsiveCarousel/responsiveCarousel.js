@@ -208,29 +208,28 @@
 				$navigation.on('click', 'a', function(event) {
 					// Prevent default
 					event.preventDefault();
-					// Prepare execute ( Stop action )
+					// Prepare execute ( Pause action )
 					obj.prepareExecute();
 
 					var $this = $(this);
-					// Previous action
-					if( $this.hasClass('previous') && obj.testPrevious(obj.itemActive) ){
-						obj.previous();
-						$navigation.removeClass('playing');
-					}
-					// Next action
-					else if( $this.hasClass('next') && obj.testNext() ){
-						obj.next();
-						$navigation.removeClass('playing');
-					}
-					// Pause action
-					else if( $this.hasClass('pause') ) {
-						$navigation.removeClass('playing');
-					}
-					// Resume action
-					else if( $this.hasClass('play') ) {
+
+					// Play action
+					if( $this.hasClass('play') ) {
 						obj.rotate();
 						obj.initRotate();
 						$navigation.addClass('playing');
+					} else {
+						// Pause, Previous, Next actions
+						$navigation.removeClass('playing');
+
+						// Previous action
+						if( $this.hasClass('previous') && obj.testPrevious(obj.itemActive) ){
+							obj.previous();
+						}
+						// Next action
+						else if( $this.hasClass('next') && obj.testNext() ){
+							obj.next();
+						}
 					}
 				});
 			};

@@ -237,9 +237,11 @@
 
 /* 주요 이벤트 정보 (슬라이더) */
 #featured {
-
     .crsl {
+        margin: 0 -5px;
+
         &-slide {
+            padding: 0 5px;
             position: relative;
 
             &-caption {
@@ -260,6 +262,15 @@
                     font-size: 1.1rem;
                     margin: .25em 0 0;
                 }
+            }
+        }
+
+        &:not(.slick-initialized) {
+            @include clearfix;
+
+            .crsl-slide {
+                float: left;
+                max-width: 33.33%;
             }
         }
     }

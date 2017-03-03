@@ -5,11 +5,7 @@
 
 // 플로팅 요소들의 컨테이너
 .group {
-    &::after {
-        clear: both;
-        display: table;
-        content: "";
-    }
+    @include clearfix;
 }
 
 // relative 포지셔닝
@@ -43,12 +39,10 @@
 
 // 캐루슬의 공통 세팅
 .crsl {
-    margin: 0 -5px;
 
     // 각 슬라이드
     &-slide {
-        margin: 0;
-        padding: 0 5px;
+        margin: 0 0 10px;
 
         &-caption {
             display: block;
@@ -57,10 +51,14 @@
 
     // 내비게이션
     &-navigation {
-        margin-top: 1em;
-
         &.playing [data-action="play"],
         &:not(.playing) [data-action="pause"] {
+            display: none;
+        }
+    }
+
+    &:not(.slick-initialized) {
+        & + .crsl-navigation {
             display: none;
         }
     }

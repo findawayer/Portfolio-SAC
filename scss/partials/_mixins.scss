@@ -27,6 +27,15 @@ $viewport-lg: 1200px;
     }
 }
 
+// 클리어 픽스
+@mixin clearfix {
+    &::after {
+        clear: both;
+        display: table;
+        content: "";
+    }
+}
+
 // 스케일
 @function scale( $base: 1, $iteration: 0 ) {
     $interval: 1.12;

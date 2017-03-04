@@ -5,7 +5,7 @@
      */
 
     // 페이지의 리소스 불러오기가 완료되면
-    $(function() {
+    $(window).on("load", function() {
         // 로딩 화면 제거
         $("#loading").fadeOut("slow", function() {
             $("body").addClass("is-ready");

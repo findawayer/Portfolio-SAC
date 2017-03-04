@@ -1,6 +1,18 @@
 (function($, undefined) {
 
     /**
+     * 로딩 화면 컨트롤
+     */
+
+    // 페이지의 리소스 불러오기가 완료되면
+    $(function() {
+        // 로딩 화면 제거
+        $("#loading").fadeOut("slow", function() {
+            $("body").addClass("is-ready");
+        });
+    });
+
+    /**
      * slick 플러그인을 적용
      * Bootstrap 내장 carousel은 스크린 너비에 맞춰 슬라이드 갯수 조절이 불가능하므로 비사용
      * API: http://kenwheeler.github.io/slick/

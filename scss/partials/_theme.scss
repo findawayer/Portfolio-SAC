@@ -271,13 +271,18 @@
             padding: 0 5px;
             position: relative;
 
+            &-link {
+                min-height: 242px;
+            }
+
             &-caption {
-                @include background-image( linear-gradient( transparent, rgba(black, .75) ) );
+                @include background-image( linear-gradient(transparent, rgba(black, .75)) );
                 padding: 30% 1.5rem 1.5rem;
                 position: absolute;
                 right: 5px;
                 bottom: 0;
                 left: 5px;
+                text-shadow: 0 1px 0 rgba(black, 0.6);
 
                 h3 {
                     color: white;
@@ -367,9 +372,15 @@
 #promotions {
     max-width: 340px;
 
-    figcaption {
-        background: $color3;
-        color: white;
-        padding: .25rem;
+    .crsl {
+        &-slide {
+            min-height: 206px;
+
+            &-caption {
+                background: $color3;
+                color: white;
+                padding: .25rem;
+            }
+        }
     }
 }

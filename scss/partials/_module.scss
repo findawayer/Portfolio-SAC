@@ -16,7 +16,8 @@
 // 반응형 이미지
 .img-fluid {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     margin: 0;
 }
 
